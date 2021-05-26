@@ -1,5 +1,13 @@
 # React Design Patterns for reusing logic
-This repo contains a small demo of various patterns to separate your logic in React application.
+This repo contains small demos of various patterns to separate your logic in React applications.
+
+Index:
+
+* [Hooks](#1-hooks)
+* [render-prop](#2-render-prop)
+* [Component Injection](#3-component-injection)
+* [Component Injection with prop-getter](#4-component-injection-with-prop-getter)
+
 
 ## Common example
 All of the following patterns will render a counter that can count up and down.
