@@ -170,3 +170,12 @@ const MultipleCountersWithLogic = () => (
     />
 );
 ```
+
+## Literature
+
+* Facebook Inc. Render Props – React. https://reactjs.org/docs/render-props.html.
+* Facebook Inc. Do Hooks replace render props and higher-order components? – Hooks FAQ. https://reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components.
+* Kent C. Dodds. How to give rendering control to users with prop getters. https://kentcdodds.com/blog/how-to-give-rendering-control-to-users-with-prop-getters.
+* Kent C. Dodds. React Hooks: What’s going to happen to render props? https://kentcdodds.com/blog/react-hooks-whats-going-to-happen-to-render-props.
+* Donavon West. Function as Child Components Are an Anti-Pattern. American Express Technology https://americanexpress.io/faccs-are-an-antipattern/.
+* Donavon West. Support both Hooks and Render Props with One Simple Trick. American Express Technology https://americanexpress.io/hydra/.
