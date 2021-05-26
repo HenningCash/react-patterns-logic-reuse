@@ -33,6 +33,9 @@ export const Counter: React.FC<CounterProps> = (props) => {
 };
 ```
 
+This is a pure component which is easy testable but it misses the state-handling logic.
+All of the following patterns will add the logic part to this component.
+
 ## Patterns
 ### 1. Hooks
 If you are using function components this should be the way how you are handling reusable logic in your code.
@@ -43,11 +46,7 @@ export const useCounterLogic = () => {
   const [value, setValue] = useState<number>(0);
   const countUp = () => setValue((currentValue) => currentValue + 1);
   const countDown = () => setValue((currentValue) => currentValue - 1);
-  return {
-    value,
-    countUp,
-    countDown,
-  };
+  return { value, countUp, countDown };
 };
 ```
 
@@ -62,6 +61,9 @@ const CounterWithHook = () => {
 ```
 
 ### 2. render-prop
+This was a common pattern in pre-Hook times.
+There might be still valid scenarios for this pattern but nowadays you should be using Hooks.
+
 #### Definition
 ```tsx
 interface CounterLogicProps {
@@ -88,6 +90,9 @@ const CounterWithLogic = () => <CounterLogic renderCounter={(props) => <Counter 
 ```
 
 ### 3. Component Injection
+Component Injection is a nice alternative to render-props.
+With render-props you often end up rending another component so why not passing component types directly?
+
 #### Definition
 ```tsx
 interface CounterLogicProps {
@@ -114,7 +119,7 @@ const CounterWithLogic = () => <CounterLogic CounterComponent={Counter} />;
 ```
 
 ### 4. Component Injection with prop-getter
-This pattern does not really make sense for our example use-case.
+This pattern does not really make sense for our example use-case but is an addition to the previous pattern.
 You will only need this if you are rendering multiple instances of an injected component
 like `<li>` or `<tr>`.
 The prop-getter function can return individual props for each rendered instance of the injected component.
