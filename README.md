@@ -84,7 +84,7 @@ export const CounterLogic: React.FC<CounterLogicProps> = (props) => {
 
 #### Usage
 ```tsx
-const CounterWithRenderProp = () => <RenderProp renderCounter={(props) => <Counter {...props} />} />;
+const CounterWithLogic = () => <CounterLogic renderCounter={(props) => <Counter {...props} />} />;
 ```
 
 ### 3. Component Injection
@@ -154,7 +154,7 @@ export const CounterLogic: React.FC<CounterLogicProps> = (props) => {
 
 #### Usage
 ```tsx
-const MultipleCounterWithLogic = () => (
+const MultipleCountersWithLogic = () => (
     <ComponentInjectionWithPropGetter
     CounterComponent={Counter}
     // This allows you to specify individual props for each instance of counter
