@@ -63,6 +63,8 @@ const CounterWithHook = () => {
 ### 2. render-prop
 This was a common pattern in pre-Hook times.
 There might be still valid scenarios for this pattern but nowadays you should be using Hooks.
+A special form of this pattern is called *Function As Child Component* (FaCC) where the function is passed in the `children` prop.
+FaCC is use extensively by libraries like [`downshift`](https://www.npmjs.com/package/downshift) or [`prism-react-renderer`](https://www.npmjs.com/package/prism-react-renderer).
 
 #### Definition
 ```tsx
