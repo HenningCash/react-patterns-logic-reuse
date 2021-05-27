@@ -93,6 +93,8 @@ const CounterWithLogic = () => <CounterLogic renderCounter={(props) => <Counter 
 Component Injection is a nice alternative to render-props.
 With render-props you often end up rending another component so why not passing component types directly?
 
+💡 Donavon West has published a package called [`render-props`](https://www.npmjs.com/package/render-props) that allows library authors to support both render-props and Component Injection.
+
 #### Definition
 ```tsx
 interface CounterLogicProps {
